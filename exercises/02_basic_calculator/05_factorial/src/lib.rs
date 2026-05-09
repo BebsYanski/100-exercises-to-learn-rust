@@ -1,12 +1,15 @@
 // Define a function named `factorial` that, given a non-negative integer `n`,
 // returns `n!`, the factorial of `n`.Time Elapsed cannot be 0
 pub fn factorial(n: u32) -> u32 {
-    let mut result = 1;
-    for i in 1..=n {
-        result *= i;
+    // let mut result = 1;
+    // for i in 1..=n {
+    //     result *= i;
+    // }
+    if n <= 1 {
+        return 1u32;
+    } else {
+        return n * factorial(n - 1);
     }
-
-    result
 }
 //
 // The factorial of `n` is defined as the product of all positive integers up to `n`.
